@@ -4,7 +4,7 @@
 
 <main>
 
-        <?php
+    <?php
     while(have_posts()): the_post();
 
         the_title();
@@ -14,8 +14,8 @@
 ?>
 
 
-    </main>
+</main>
 
-</body>
-
-</html>
+<?php
+        get_footer();
+    ?>
