@@ -10,21 +10,22 @@
     Tags: maquillaje, curso, curso de maqullaje, ventas,ventas maquillaje
     Text Domain: FabyOC
 */
-@import url('https://fonts.googleapis.com/css2?family=Borel&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Patrick+Hand&display=swap&family=Roboto:400,500,700');
 
 
 :root {
     --title-font: 'Borel', cursive;
     --text-font: 'Patrick Hand', cursive;
     /* Colores */
-    --primario: #FF8CB7;    ;
+    --primario: #FF8CB7;
+    ;
     --primario-degradado: #ffecf4;
     --secundario: purple;
     --blanco: #fff;
     --gris: #7a7a7a;
 }
 
-body{
+body {
     background-color: var(--blanco);
 }
 
@@ -68,11 +69,11 @@ img {
     margin: 0 auto;
 }
 
-.centered-content{
+.centered-content {
     width: min(95%, 80rem);
 }
 
-.frontpage-container{
+.frontpage-container {
     width: 80vw;
     margin: auto;
 }
@@ -87,7 +88,7 @@ img {
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     width: 100vw;
     text-align: center;
     background-color: var(--primario-degradado);
@@ -99,7 +100,7 @@ img {
 
 .menu-principal {
     width: 100%;
-} 
+}
 
 .menu-principal .menu {
     display: flex;
@@ -122,20 +123,51 @@ img {
     margin: 8px 35px;
 }
 
-.menu-item{
+.menu-item {
     flex-grow: 1;
 }
 
-.banner{
+.banner {
     width: 100vw;
 }
 
-
-.nav-bar .menu-principal .current_page_item a{
-        color: var(--primario);
+.page-title{
+    padding: 0;
+    color: var(--secundario);
+    font-size: 60px;
+    width: 60vw;
+    margin: 0;
 }
 
-.menu-container{
+.page-text{
+    text-align: justify;
+    margin: 0px;
+}
+
+/* Clase */
+
+.clase-text{
+    text-align: justify;
+    margin: auto;
+    width: 80vw;
+}
+
+.banner-content{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transition: 0.7s background;
+    background: rgba(74, 100, 114, 0.3);
+    z-index: 1;
+}
+
+.nav-bar .menu-principal .current_page_item a {
+    color: var(--primario);
+}
+
+.menu-container {
     display: flex;
     padding: 30px 122px;
     gap: 20px;
@@ -145,16 +177,16 @@ img {
 
 /* Frontpage menu container main */
 
-.img-menu-container{
+.img-menu-container {
     position: relative;
     display: inline-block;
 }
 
-.img-menu{
+.img-menu {
     width: 250px;
 }
 
-.img-menu-title{
+.img-menu-title {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -166,16 +198,16 @@ img {
 
 /* Footer*/
 
-.footer{
+.footer {
     bottom: 0;
     width: 100vw;
 }
 
-.content-footer .menu-principal ul{
+.content-footer .menu-principal ul {
     justify-content: center;
-} 
+}
 
-.content-footer{
+.content-footer {
     padding: 2rem 0;
     flex-direction: column;
     display: flex;
@@ -184,7 +216,7 @@ img {
 
 
 .footer .menu-principal a::before,
-.footer .menu-principal a::after{
+.footer .menu-principal a::after {
     display: none;
 }
 
@@ -192,7 +224,7 @@ img {
     border: none;
 }
 
-.copyright{
+.copyright {
     text-align: center;
     font-family: var(--text-font);
     font-size: 20px;
@@ -201,127 +233,156 @@ img {
 }
 
 
-/* Slider */
+/* Section possibly for entrances */
 
-@keyframes slide {
-	0% { transform: translateX(0); }
-	10% { transform: translateX(0); }
-
-	15% { transform: translateX(-100%); }
-	30% { transform: translateX(-100%); }
-
-	35% { transform: translateX(-200%); }
-	50% { transform: translateX(-200%); }
-
-	55% { transform: translateX(-300%); }
-	70% { transform: translateX(-300%); }
-
-	75% { transform: translateX(-400%); }
-	90% { transform: translateX(-400%); }
-
-	95% { transform: translateX(-500%); }
-	100% { transform: translateX(-500%); }
+.section-container{
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    gap: 31px 15px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
-* { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
-
-body {
-	font-family: sans-serif;
+.section-title{
+    width: 80vw;
+    margin: auto;
+    padding: 42px 36px 5px;
+    font-size: 35px;
+    color: var(--primario);
 }
 
-.wrapper {
-	max-width: 1200px;
-	margin: 0 auto;
+/* Blog card */
+.blog {
+    position: relative;
+    width: 16em;
+    height: 25em;
+/* 
+    background: url(https://cache.desktopnexus.com/thumbseg/25/25727-bigthumbnail.jpg) no-repeat;
+    background-size: 22em 30em;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+    overflow: hidden; */
 }
 
-.slider {
-	position: relative;
+.blog * {
+    z-index: 2;
 }
 
-.slides {
-	position: relative;
-	display: flex;
-	overflow: hidden;
+.blog:hover .color-overlay {
+    background: rgba(74, 100, 114, 0.8);
 }
 
-.slide {
-	width: 100vw;
-	flex-shrink: 0;
-	animation-name: slide;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+.blog:hover .info {
+    bottom: -4em;
+    opacity: 1;
 }
 
-.slides:hover .slide {
-	animation-play-state: paused;
+.blog,
+.color-overlay {
+    border-radius: 0.7em;
 }
 
-.slide img {
-	width: 100%;
-	vertical-align: top;
+.color-overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transition: 0.7s background;
+    background: rgba(74, 100, 114, 0.3);
+    z-index: 1;
 }
 
-.slide a {
-	width: 100%;
-	display: inline-block;
-	position: relative;
+.title-box {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 3em;
 }
 
-.caption {
-	color: white;
-	text-shadow: 1px 1px black;
-	font-size: 8vw;
-	position: absolute;
-	bottom: 8vw;
-	right: 4vw;
+.title-box hr {
+    margin-top: -0.4em;
+    margin-bottom: 1em;
+    width: 5em;
+    height: 0.25em;
+    box-sizing: content-box;
+    border: none;
+    background: #D0BC57;
 }
 
-.slide:target {
-	animation-name: none;
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 50;
+.blog h3 {
+    position: absolute;
+    left: 20px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1em;
+    color: var(--blanco);
+    text-align: center;
 }
 
-.slider-controler {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	text-align: center;
-	padding: 5px;
-	background-color: rgba(0,0,0,0.5);
-	z-index: 100;
+.intro a{
+    width: 170px;
+    margin: 0 auto;
+    color: var(--blanco);
+    text-decoration: none;
+    font-family: var(--text-font);
+    font-size: 18px;
+    font-style: italic;
+    line-height: 18px;
 }
 
-.slider-controler li {
-	margin: 0 0.5rem;
-	display: inline-block;
-	vertical-align: top;
+
+.info {
+    font-family: 'Droid Serif', serif;
+    font-size: 1em;
+    color: #ddd;
+    line-height: 1.1em;
+    padding: 0 2em;
+
+    position: relative;
+    bottom: -4em;
+    opacity: 0;
+    background: transparent;
+    transition: opacity 0.3s, bottom 0.3s;
+    text-align: left;
 }
 
-.slider-controler a {
-	display: inline-block;
-	vertical-align: top;
-	text-decoration: none;
-	color: white;
-	font-size: 1.5rem;
+.blog-footer {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10em;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+    border-radius: 0 0 0.7em 0.7em;
 }
 
-@media only screen and (min-width: 1200px) {
-	.slide {
-		width: 1200px;
-	}
+.blog-footer>.icon-holder {
+    position: absolute;
+    bottom: 0;
+    height: 5em;
+    width: 100%;
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 0 2em;
 
-	.caption {
-		font-size: 96px;
-		bottom: 96px;
-		right: 50px;
-	}
+}
+
+.icon-holder i {
+
+    color: #D0BC57;
+}
+
+.icon-holder span,
+h3 {
+    color: #aCcff0;
+}
+
+space {
+    display: inline-block;
+    width: 0.6em;
+    height: 1em;
 }
